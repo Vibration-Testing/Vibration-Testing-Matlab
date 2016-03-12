@@ -1,6 +1,6 @@
 
-%VTBFRDEM Demo for Frequency Domain Section of the Vibration Toolbox
-% Run by typing sshow('vtbfrdem')
+%VTDEM Demo for Frequency Domain Section of the Vibration Testing Toolbox
+% Run by typing sshow('vtdem')
 %
 
 % Copyright Joseph C. Slater, 1995
@@ -8,10 +8,10 @@
 %
 numdat=5; %number of runs for averaging
 clear y u
-%if ~exist('SlideShowGUIFlag'),sshow('vtbfrdem'),return;end
+%if ~exist('SlideShowGUIFlag'),sshow('vtdem'),return;end
 if ~exist('SlideShowGUIFlag'), figNumber=0;end
 
-load vtbdem1
+load vtdem1
 subplot(1,1,1)
 imhan=image(x);
 colormap(map)

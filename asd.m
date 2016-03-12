@@ -1,17 +1,17 @@
 function [fout,Pyyout]=asd(y,dt,n,ave)
 %ASD Onesided Auto or power spectrum density estimate of the data sequence y.
-% [F,Pyy] = ASD(Y,DT,N,AVE) estimates the Power/Auto Spectral
+% [F,Pyy] = ASD(Y,DT,N,AVE) estimates the Power/Auto Spectrum
 % Density using the direct method. N is the number of 
 % points to be used in the Fourier Transform. The default 
 % is not to zero pad to the next power of 2. If DT is the time 
 % vector, DT is extracted as T(2)-T(1). If Y is a matrix, 
-% ASD will find the Auto Spectral Density for each column 
+% ASD will find the Auto Spectrum Density for each column 
 % and average the results unless AVE is set to 'noave'. 
 % N and AVE are optional. Either can be left out.
 %
 % Zero padding is turned off harshly now. 
 %
-% ASD(Y,DT,N,AVE) plots the Auto Spectral Density if there
+% ASD(Y,DT,N,AVE) plots the Auto Spectrum Density if there
 % are no output arguments. Click in the region of interest
 % to zoom in.  Each click will double the size of the plot.
 % Double click to return to full scale.
@@ -82,9 +82,9 @@ size(f);
 if nargout==0
  plot(f,10*log10(Pyy))%see appendix
  
- title('Power Spectral Density of F(t) (dB)')
+ title('Power Spectrum Density of F(t) (dB)')
  xlabel('Frequency (Hz)')
- ylabel('Power Spectral Density')
+ ylabel('Power Spectrum Density')
  grid
  zoom on
  return

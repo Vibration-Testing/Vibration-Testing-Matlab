@@ -1,18 +1,18 @@
 function [fout,Pxyout]=crsd(x,y,dt,n,ave)
 %CRSD One sided cross spectrum density estimate of the data sequences X and Y (Sxy).
-% [F,Pxy] = CRSD(X,Y,DT,N,AVE) estimates the Cross Spectral
+% [F,Pxy] = CRSD(X,Y,DT,N,AVE) estimates the Cross Spectrum
 % Density using the direct method. 
 % DT is the time between date samples.
 % If DT is the time vector, DT is extracted as T(2)-T(1).
 % N is the number of points to be used in the Fourier 
 % Transform. The default for N is to zero pad the data 
 % to the next power of 2.
-% If X and Y are matrices, CRSD will find the Cross Spectral 
+% If X and Y are matrices, CRSD will find the Cross Spectrum 
 % Density for each column and average the results
 % unless AVE is set to 'noave'. N and AVE are optional.
 % Either can be left out.
 %
-% CRSD(X,Y,DT,...) plots the Cross Spectral Density if there
+% CRSD(X,Y,DT,...) plots the Cross Spectrum Density if there
 % are no output arguments.  Click in the region of interest
 % to zoom in.  Each click will double the size of the plot.
 % Double click to return to full scale.
@@ -69,9 +69,9 @@ f=(0:(nfreq/(lfft/2)):fmax)';
 if nargout==0
  semilogy(f,abs(Pxy))
  
- title('Cross Spectral Density')
+ title('Cross Spectrum Density')
  xlabel('Frequency (Hz)')
- ylabel('Cross Spectral Density')
+ ylabel('Cross Spectrum Density')
  grid
  zoom on
  return

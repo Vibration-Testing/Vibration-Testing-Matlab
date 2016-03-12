@@ -258,7 +258,7 @@ str=...
 
 ssdisp(figNumber,str);
 crsd(y,y,t)
-title('Auto Spectral Density')
+title('Auto Spectrum Density')
 chil=get(gcf,'children');
 for i=1:length(chil)
   if strcmp(get(chil(i),'type'),'axes') & chil(i)~=gca

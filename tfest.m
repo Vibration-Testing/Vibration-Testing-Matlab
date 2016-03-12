@@ -129,9 +129,7 @@ if nargout==0
   set(gca,'YLim',phmin_max)
   gridmin_max=round(phmin_max/90)*90;
   set(gca,'YTick',gridmin_max(1):90:gridmin_max(2))
-  % set(gca,'GridLineStyle','--')
-  % gridmin_max=round(phmin_max/45)*45;
-  % set(gca,'YTick',gridmin_max(1):45:gridmin_max(2))
+
   set(gca,'GridLineStyle',':')
   set(gca,'YTickLabel',gridmin_max(1):90:gridmin_max(2))
   zoom on

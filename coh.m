@@ -49,7 +49,7 @@ end
 coh=abs(Pxy).^2./(Pxx.*Pyy);
 if nargout==0
  plot(f,coh)
- logo
+ %logo
  title('Coherance')
  xlabel('Frequency (Hz)')
  ylabel('Coherance')

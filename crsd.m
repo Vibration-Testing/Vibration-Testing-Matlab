@@ -28,6 +28,7 @@ function [fout,Pxyout]=crsd(x,y,dt,n,ave)
 %       short data sets. 12/27/98
 % Normalized for magnitude 9/23/98
 % Frequency Scale Fixed 9/23/98
+% Fixed amplitude of zero frequency value 3/30/16 (filed by Admir Makas)
 
 sy=size(y);
 if nargin==3
@@ -53,8 +54,10 @@ n=length(x);
 ffty=fft(y,n)*dt;
 fftx=fft(x,n)*dt;
 Pxy=ffty.*conj(fftx)/(n*dt)*2;
-%max(Pxy)
-%max(real(ffty.*conj(ffty)/n)/n);%Pyy
+
+Pxy(:,1) = Pxy(:,1)/2;
+
+
 Pxy=Pxy(1:ceil(n/2),:);
 if sy(2)~=1 & ~strcmp(ave,'noave')
  Pxy=mean(Pxy')';

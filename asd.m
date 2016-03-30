@@ -12,9 +12,7 @@ function [fout,Pyyout]=asd(y,dt,n,ave)
 % Zero padding is turned off harshly now. 
 %
 % ASD(Y,DT,N,AVE) plots the Auto Spectrum Density if there
-% are no output arguments. Click in the region of interest
-% to zoom in.  Each click will double the size of the plot.
-% Double click to return to full scale.
+% are no output arguments. 
 %
 % See page 38, R.K. Otnes and L. Enochson, Digital Time Series
 % Analysis, J. Wiley and Sons, 1972.
@@ -27,6 +25,8 @@ function [fout,Pyyout]=asd(y,dt,n,ave)
 %       short data sets. 12/27/98
 % Frequency Scale Fixed 7/21/98
 % Normalized for magnitude 7/21/98
+% Fixed amplitude of zero frequency value 3/30/16  (filed by Admir Makas)
+
 
 n=length(y);
 sy=size(y);
@@ -50,24 +50,15 @@ end
 if isempty(n)
   n=2^nextpow2(sy(1));
 end
-%size(y)
-%n
-%pause
+
 ffty=fft(y,n)*dt;
-%size(ffty)
-%for ii=1:size(y,2)
-%    ffty2(:,ii)=fft(y(:,ii),n);
-%end
-%size(ffty2)
-%pause
-
-
 
 Pyy=real(ffty.*conj(ffty))/(n*dt)*2;
 
 Pyy=Pyy(1:ceil(n/2),:);
-Pyy(1)=Pyy(1)/2;
-%Pyy=Pyy((n:-1:n/2+1)+1,:);
+
+Pyy(:,1)=Pyy(:,1)/2;
+
 if sy(2)~=1 & ~strcmp(ave,'noave')
  Pyy=mean(Pyy')';
 end

@@ -69,7 +69,7 @@ end
 
 if nargout==0
  plot(t,crcr)
- logo
+ %logo
  if type==1
    text1='Linear ';
   else

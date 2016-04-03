@@ -89,7 +89,7 @@ if nargout==0
  subplot(211)
  plot(freq,20*log10(abs(tfunc1)))
  title('Compliance Transfer Function')
- logo
+
  xlabel('Frequency (Hz)')
  ylabel('Mag (dB)')
  grid on
@@ -97,7 +97,7 @@ if nargout==0
  subplot(212)
  phase=[angle(tfunc1(1)) ; unwrap(angle(tfunc1(2:length(tfunc1))))]*180/pi;
  plot(freq,phase)
- logo
+
  xlabel('Frequency (Hz)')
  ylabel('Phase (deg)')
  grid on
@@ -132,7 +132,7 @@ if nargout==0
  
  phase=[angle(tfunc2(1)) ; unwrap(angle(tfunc2(2:length(tfunc2))))]*180/pi;
  plot(freq,phase)
- logo
+
  xlabel('Frequency (Hz)')
  ylabel('Phase (deg)')
  grid on
@@ -154,7 +154,7 @@ if nargout==0
  subplot(211)
 %plot(freq,20*log10(abs(tfunc3)))
  title('Inertance Transfer Function')
- logo
+
  xlabel('Frequency (Hz)')
  ylabel('Mag (dB)')
  grid on
@@ -165,7 +165,7 @@ if nargout==0
  end
  phase=[angle(tfunc3(1)) ; unwrap(angle(tfunc1(2:length(tfunc3))))]*180/pi;
  plot(freq,phase)
- logo
+
  xlabel('Frequency (Hz)')
  ylabel('Phase (deg)')
  grid on

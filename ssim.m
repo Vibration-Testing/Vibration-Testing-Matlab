@@ -56,7 +56,7 @@ A=M\(f'-D*V'-K*X');
 if nargout==0
   
   plot(t,X)
-  logo
+
   title('Displacements versus Time')
   xlabel('Time')
   ylabel('Displacements')
@@ -65,7 +65,7 @@ if nargout==0
 
   pause
   plot(t,V)
-  logo
+
   title('Velocities versus Time')
   xlabel('Time')
   ylabel('Velocities')
@@ -73,7 +73,7 @@ if nargout==0
   zoom on
   pause
   plot(t,A)
-  logo
+
   title('Accelerations versus Time')
   xlabel('Time')
   ylabel('Accelerations')

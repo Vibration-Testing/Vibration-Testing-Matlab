@@ -58,7 +58,7 @@ end
 
 if nargout==0
  plot(t,real(impres))
- logo
+
  title('Impulse Response')
  xlabel('Time')
  ylabel('Impulse Response')

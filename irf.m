@@ -14,8 +14,7 @@ function [tout,impout]=irf(frf,dF,n,ave)
 %
 % IRF(FRF,DF,N,AVE) plots the Impulse Response Function if 
 % there are no output arguments. Click in a region of interest
-% to zoom in.  Each click will double the size of the plot.
-% Double click to return to full scale.
+% there are no output arguments. 
 %
 % See Also TFEST
 

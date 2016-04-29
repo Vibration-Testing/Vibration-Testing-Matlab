@@ -13,7 +13,6 @@ function [tout,impout]=irf(frf,dF,n,ave)
 % are optional. Either one may be left out.
 %
 % IRF(FRF,DF,N,AVE) plots the Impulse Response Function if 
-% there are no output arguments. Click in a region of interest
 % there are no output arguments. 
 %
 % See Also TFEST

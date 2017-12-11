@@ -7,7 +7,7 @@ function [a,b,c,d]=state(m,d,k,bs)
 % from the originating equation
 % Mxddot+Cxdot+x=Bs u
 % 
-% An identicty c matrix, and a zero d matrix are created.
+% An identity c matrix, and a zero d matrix are created.
   
 % Copyright Joseph C. Slater, 2003
 if nargin==2

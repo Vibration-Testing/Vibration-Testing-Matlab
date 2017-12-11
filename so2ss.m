@@ -1,5 +1,5 @@
 function [a,b,c,d]=state(m,d,k,bs)
-% STATE [a,b,c,d]=STATE(M,C,K,Bs) returns the state matrix
+% SO2SS [a,b,c,d]=STATE(M,C,K,Bs) returns the state matrix
 % [xdot ]   [   0        I  ][ x  ]    [   0   ]
 % [     ] = [               ][    ] +  [       ] [u]
 % [xddot]   [-M^-1*K -M^-1*C][xdot]    [M^-1*Bs]

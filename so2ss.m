@@ -9,7 +9,7 @@ function [a,b,c,d]=so2ss(M, D, K, Bt, Cd, Cv, Ca)
 % where z = [x' xdot']'
 %
 % given the second order form equations
-% Mxddot+Cxdot+x=Bs u
+% M xddot + C xdot + K x=Bs u
 % y = Cd x + Cv xdot + Ca xddot
   
 % Copyright Joseph C. Slater, 2003

@@ -1,4 +1,4 @@
-function [a,b,c,d]=so2ss(M, D, K, Bt, Cd, Cv, Ca)
+function [a,b,c,d]=so2ss(M, Dso, K, Bt, Cd, Cv, Ca)
 % SO2SS [a,b,c,d]=SO2SS(M, C, K, Bt, Cd, Cv, Ca) returns the state system
 % [xdot ]   [   0        I  ][ x  ]    [   0   ]
 % [     ] = [               ][    ] +  [       ] [u]
@@ -21,14 +21,16 @@ if nargin==4
     Cd = eye(l)
     Ca = zeros(l)
     Cv = Ca
-if nargin<4
-  Bt=eye(l)  
+elseif nargin<4
+  Bt=eye(l)
+end
+
 if nargin<3
   K=D;D=0*K;
 end
 
-a=[zeros(l) eye(l);-M\K -M\D];
+a=[zeros(l) eye(l);-M\K -M\Dso];
 b=[zeros(l,size(Bt,2)); M\Bt];
-c=[Cd-Ca*M\K, Cv-Ca*M\D]
-d=Ca*M\Bt;
+c=[Cd-Ca*(M\K), Cv-Ca*(M\Dso)]
+d=Ca*(M\Bt);
 

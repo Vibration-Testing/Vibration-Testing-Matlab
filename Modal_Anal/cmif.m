@@ -1,7 +1,7 @@
 function CMIF(w,H)
 % CMIF(w,H) calculates and plots the complex mode indicator function
-%  for the FRFs H. H rows and columns reference degrees of freedom, and 
-%  the third dimension is wrt omega. 
+%  For the FRFs, H, rows and columns reference degrees of freedom, and
+%  the third dimension is wrt omega.
 
 % Copyright Joseph C. Slater, 2001
 % Version 1.0
@@ -16,24 +16,24 @@ if s(2)>s(1)
 	a=H(:,:,1)*H(:,:,1)';
 	[v(:,:,1),lam(:,:,1)]=eig(real(a));
 	for i=1:l
-	H(:,:,i);
-	a=H(:,:,i)*H(:,:,i)';
-	a=v(:,:,i-1)\a*v(:,:,i-1)
-	pause
-	[v(:,:,i),lam(:,:,i)]=eig(real(a));
-	v(:,:,i)
-end
+	  H(:,:,i);
+	  a=H(:,:,i)*H(:,:,i)';
+	  a=v(:,:,i-1)\a*v(:,:,i-1)
+	  pause
+	  [v(:,:,i),lam(:,:,i)]=eig(real(a));
+	  v(:,:,i);
+  end
 else
 	a=H(:,:,1)'*H(:,:,1);
 	[v(:,:,1),lam(:,:,1)]=eig(real(a));
 	for i=2:l
-	a=real(H(:,:,i)'*H(:,:,i));
+	  a=real(H(:,:,i)'*H(:,:,i));
 	%a=v(:,:,i-1)\real(a)*v(:,:,i-1);
 	%pause
-	[v(:,:,i),lam(:,:,i)]=eig(a);
-	v(:,:,i)\real(a)*v(:,:,i);
-	v(:,:,i);
-end
+	  [v(:,:,i),lam(:,:,i)]=eig(a);
+	  v(:,:,i)\real(a)*v(:,:,i);
+	  v(:,:,i);
+  end
 end
 size(lam);
 s;

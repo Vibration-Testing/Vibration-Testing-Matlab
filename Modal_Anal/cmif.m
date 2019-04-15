@@ -21,7 +21,7 @@ if s(2)>s(1)
 	  a=v(:,:,i-1)\a*v(:,:,i-1)
 	  pause
 	  [v(:,:,i),lam(:,:,i)]=eig(real(a));
-	  v(:,:,i);
+	  %v(:,:,i);
   end
 else
 	a=H(:,:,1)'*H(:,:,1);
@@ -31,8 +31,8 @@ else
 	%a=v(:,:,i-1)\real(a)*v(:,:,i-1);
 	%pause
 	  [v(:,:,i),lam(:,:,i)]=eig(a);
-	  v(:,:,i)\real(a)*v(:,:,i);
-	  v(:,:,i);
+	  %v(:,:,i)\real(a)*v(:,:,i);
+	  %v(:,:,i);
   end
 end
 size(lam);

@@ -1,71 +1,16 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# MATLAB
+*.asv
+*.m~
+*.mex*
+*.slxc
+slprj/
+sccprj/
+codegen/
+octave-workspace
 
-# C extensions
-*.so
+# macOS
+.DS_Store
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-Untitled.ipynb
-.ipynb_checkpoints/*
-
-# Sphinx
-_build*
-latex*
-html*
+# Editor/OS cruft
 *~
-*.html
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-.hypothesis/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-.DS_Store
-.DS_Store
+.ipynb_checkpoints/

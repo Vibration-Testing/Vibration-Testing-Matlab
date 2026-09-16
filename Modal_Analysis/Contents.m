@@ -1,4 +1,5 @@
 % Modal_Analysis
+% Version 2026.09.16 16-Sep-2026
 % Modal parameter identification, curve fitting, and related utilities.
 %
 % Curve fitting / mode identification

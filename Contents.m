@@ -1,4 +1,5 @@
 % Vibration-Testing-Matlab
+% Version 2026.09.16 16-Sep-2026
 % Vibration testing, signal-processing, and modal-analysis functions
 % affiliated with the manuscript "Vibration Testing with Modal Analysis
 % and Health Monitoring - MATLAB version".

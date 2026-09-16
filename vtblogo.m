@@ -1,3 +1,4 @@
+% VTBLOGO Add "The Vibration Toolbox" watermark text to the current figure.
 cura=gca;
 axes('units','normal','position',[0 0 .4 .05],'visible','off')
 h=text(0.0,0.0,'The Vibration Toolbox','color',[1 1 0],...

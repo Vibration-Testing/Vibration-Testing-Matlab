@@ -1,3 +1,5 @@
+% ASDTEST Demo script comparing auto spectral density (ASD) estimates
+% of a 20 Hz sine wave sampled at two different rates.
 t=0:1/1024:1-1/1024;
 a=sin(t*2*pi*20);
 t2=0:1/256:1-1/256;

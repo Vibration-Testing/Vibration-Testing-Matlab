@@ -32,24 +32,6 @@ function [z,nf,u]=mmcf(f,TF,Fmin,Fmax,nmodes)
 % Updated 5/15/01 to include frequency range for curve fitting
 % Modified from MDOFCF 7/1/01 to include multiple modes
 
-disp('This is beta software written 02-Jun-2001')
-disp('This code may not be used by anyone not authorized by J. Slater')
-disp('This code will expire 01-Jan-2002')
-
-if datenum('10-Dec-2001')<datenum(date)
-	warndlg('contact joseph.slater@wright.edu for an update.','mdofcf.p will expire 01-Jan-2002')	
-end
-
-
-if datenum('01-Jan-2002')<datenum(date)
-	warndlg('contact joseph.slater@wright.edu for an update.','mdofcf.p has expired')	
-end
-
-% Cut above here for p-code
-if datenum('01-Jan-2002')<datenum(date)
-	delete mdofcd.p
-end
-
 inlow=1;
 inhigh=length(f);
 if nargin==4 |nargin==5

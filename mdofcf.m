@@ -68,20 +68,6 @@ function [z,nf,u]=mdofcf(f,TF,Fmin,Fmax)
 % Updated 11/13/07 to mass normalize mode shapes
 % Updated 11/13/07 example to demonstrate ID of system matrices
 
-%disp('This is beta software written 07-May-2001')
-%disp('This code may not be used by anyone not authorized by J. Slater')
-%disp('This code will expire 15-Jun-2001')
-
-%if datenum('10-Jun-2001')<datenum(date)
-%	warndlg('contact joseph.slater@wright.edu for an update.','mdofcf.p will expire 15-Jun-2003')	
-%end
-
-
-% if datenum('15-Jun-2004')<datenum(date)
-% 	delete mdofcd.p
-% 	warndlg('contact joseph.slater@wright.edu for an update.','mdofcf.p has expired')	
-% end
-
 inlow=1;
 inhigh=length(f);
 

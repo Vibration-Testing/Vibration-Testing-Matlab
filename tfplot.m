@@ -50,7 +50,6 @@ function TFPLOT(F,Xfer,Fmin,Fmax,FLAG)
 % Copyright J. Slater, Dec 17, 1994
 % Updated April 27, 1995
 
-%Copy protection, expires Jan 1, 2001
 lenF=length(F);
 
 if lenF==1;
